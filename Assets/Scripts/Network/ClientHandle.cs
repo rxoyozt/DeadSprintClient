@@ -6,7 +6,7 @@ using UnityEngine;
 public class ClientHandle : MonoBehaviour
 {
     //ClientHadle class will process the packet that has been received to be read and use the data sent from the server.
-    public static void Welcome(Packet _packet)
+    public static void welcome(Packet _packet)
     {
         //note: write the code in order the same way from ServerSend class at least for TCP packets
 
@@ -15,28 +15,28 @@ public class ClientHandle : MonoBehaviour
 
         Debug.Log($"Message from the server: {_msg}");
         Client.instance.myId = _myId;
-        ClientSend.WelcomeReceived();
+        ClientSend.welcomeReceived();
 
-        Client.instance.udp.Connect(((IPEndPoint)Client.instance.tcp.socket.Client.LocalEndPoint).Port);
+        Client.instance.udp.connect(((IPEndPoint)Client.instance.tcp.socket.Client.LocalEndPoint).Port);
     }
 
-    public static void SpawnPlayer(Packet _packet)
+    public static void spawnPlayer(Packet _packet)
     {
         int _id = _packet.ReadInt();
         string _username = _packet.ReadString();
         Vector2 _position = _packet.ReadVector2();
 
-        GameManager.instance.SpawnPlayer(_id, _username, _position);
+        GameManager.instance.spawnPlayer(_id, _username, _position);
     }
 
-    public static void PlayerPosition(Packet _packet)
+    public static void playerPosition(Packet _packet)
     {
         int _id = _packet.ReadInt();
         Vector3 _position = _packet.ReadVector3();
         GameManager.players[_id].transform.position = _position;
     }
 
-    public static void PlayerRotation(Packet _packet)
+    public static void playerRotation(Packet _packet)
     {
         int _id = _packet.ReadInt();
         Quaternion _rotation = _packet.ReadQuaternion();

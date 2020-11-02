@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     }
 
     //4:40
-    public void SpawnPlayer(int _id, string _username, Vector2 _position)
+    public void spawnPlayer(int _id, string _username, Vector2 _position)
     {
         GameObject _player;
         if (_id == Client.instance.myId)

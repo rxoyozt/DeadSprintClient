@@ -6,10 +6,10 @@ public class PlayerController : MonoBehaviour
 {
     private void FixedUpdate()
     {
-        SendInputToServer();
+        sendInputToServer();
     }
 
-    private void SendInputToServer()
+    private void sendInputToServer()
     {
         bool[] _inputs = new bool[]
         {
@@ -19,6 +19,6 @@ public class PlayerController : MonoBehaviour
             Input.GetKey(KeyCode.D)
         };
 
-        ClientSend.PlayerMovement(_inputs);
+        ClientSend.playerMovement(_inputs);
     }
 }

@@ -24,7 +24,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void ConnectToServer()
+    public void connectToServer()
     {
         startMenu.SetActive(false);
         usernameField.interactable = false;

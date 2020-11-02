@@ -4,30 +4,30 @@ using UnityEngine;
 
 public class ClientSend : MonoBehaviour
 {
-    private static void SendTCPData(Packet _packet)
+    private static void sendTCPData(Packet _packet)
     {
         _packet.WriteLength();
-        Client.instance.tcp.SendData(_packet);
+        Client.instance.tcp.sendData(_packet);
     }
 
-    private static void SendUDPData(Packet _packet)
+    private static void sendUDPData(Packet _packet)
     {
         _packet.WriteLength();
-        Client.instance.udp.SendData(_packet);
+        Client.instance.udp.sendData(_packet);
     }
 
-    public static void WelcomeReceived()
+    public static void welcomeReceived()
     {
         using (Packet _packet = new Packet((int)ClientPackets.welcomeReceived))
         {
             _packet.Write(Client.instance.myId);
             _packet.Write(UIManager.instance.usernameField.text);
 
-            SendTCPData(_packet);
+            sendTCPData(_packet);
         }
     }
 
-    public static void PlayerMovement(bool[] _inputs)
+    public static void playerMovement(bool[] _inputs)
     {
         using (Packet _packet = new Packet((int)ClientPackets.playerMovement))
         {
@@ -38,7 +38,7 @@ public class ClientSend : MonoBehaviour
             }
             _packet.Write(GameManager.players[Client.instance.myId].transform.rotation);
 
-            SendUDPData(_packet);
+            sendUDPData(_packet);
         }
     }
 }
