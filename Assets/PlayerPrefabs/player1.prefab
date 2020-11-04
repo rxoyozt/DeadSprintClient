@@ -97,6 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   username: 
+  inputs: 
 --- !u!114 &5341870301891107207
 MonoBehaviour:
   m_ObjectHideFlags: 0

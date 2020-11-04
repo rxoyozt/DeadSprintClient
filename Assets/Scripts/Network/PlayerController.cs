@@ -20,5 +20,6 @@ public class PlayerController : MonoBehaviour
         };
 
         ClientSend.playerMovement(_inputs);
+        GameManager.players[Client.instance.myId].inputs = _inputs;
     }
 }

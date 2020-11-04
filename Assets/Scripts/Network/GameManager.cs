@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public static Dictionary<int, PlayerManager> players = new Dictionary<int, PlayerManager>();
     public GameObject localPlayerPrefab;
     public GameObject playerPrefab;
+    public int tick;
+    public int tickDelay = 0;
 
     private void Awake()
     {
@@ -20,6 +22,15 @@ public class GameManager : MonoBehaviour
             //ensures only 1 instance of the client class exist
             Debug.Log("Instance already exist, destroying object");
             Destroy(this);
+        }
+    }
+
+    private void Update()
+    {
+        tick += 1;
+        if (tick > Constants.TICK_DELAY)
+        {
+            tickDelay = tick - Constants.TICK_DELAY;
         }
     }
 

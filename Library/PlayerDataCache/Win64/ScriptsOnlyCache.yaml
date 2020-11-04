@@ -63,21 +63,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12272}
     - Class: 114
-      Script: {instanceID: 12546}
+      Script: {instanceID: 12548}
     - Class: 114
-      Script: {instanceID: 12576}
+      Script: {instanceID: 12578}
     - Class: 114
-      Script: {instanceID: 12746}
+      Script: {instanceID: 12748}
     - Class: 114
-      Script: {instanceID: 12986}
+      Script: {instanceID: 12990}
     - Class: 114
-      Script: {instanceID: 13276}
+      Script: {instanceID: 13280}
     - Class: 114
-      Script: {instanceID: 13448}
+      Script: {instanceID: 13452}
     - Class: 114
-      Script: {instanceID: 13752}
+      Script: {instanceID: 13756}
     - Class: 114
-      Script: {instanceID: 14362}
+      Script: {instanceID: 14366}
+    - Class: 114
+      Script: {instanceID: 14808}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -124,15 +126,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12348}
     - Class: 114
-      Script: {instanceID: 12546}
+      Script: {instanceID: 12548}
     - Class: 114
-      Script: {instanceID: 12986}
+      Script: {instanceID: 12990}
     - Class: 114
-      Script: {instanceID: 13752}
+      Script: {instanceID: 13756}
     - Class: 114
-      Script: {instanceID: 14362}
+      Script: {instanceID: 14366}
     - Class: 114
-      Script: {instanceID: 14404}
+      Script: {instanceID: 14408}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -332,7 +334,7 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 19ce4d990b36c942bc272650aa89dc85
+      Hash: bc230ba1bdaa80e0d9164cd105141098
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerManager
@@ -416,7 +418,7 @@ ScriptsOnlyBuild:
     className: UIManager
   - hash:
       serializedVersion: 2
-      Hash: 86a4c4a60253e8c173479e8f7fa608c6
+      Hash: 80559ef45d69cfc91a67f1e434469884
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
